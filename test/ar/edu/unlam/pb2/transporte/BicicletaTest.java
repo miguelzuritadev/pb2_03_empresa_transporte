@@ -14,12 +14,12 @@ public class BicicletaTest {
 	@Test
 	public void probarQueNoPuedeEnviarMasDe2Paquetes() {
 		Integer valorEsperado = 2;
-		Bicicleta bicicleta = new Bicicleta();
+		Transporte bicicleta = new Bicicleta();
 		Paquete paquete1 = new Paquete(0.1, 0.1, 0.1, 1.0);
 		bicicleta.enviar(paquete1, "San Justo");
 		
 		Paquete paquete2 = new Paquete(0.1, 0.1, 0.1, 1.0);
-		bicicleta.enviar(paquete2, "Moron");
+		bicicleta.enviar(paquete2, "San Justo");
 		
 		Paquete paquete3 = new Paquete(0.1, 0.1, 0.1, 1.0);
 		bicicleta.enviar(paquete3, "Ramos Mejia");
@@ -32,7 +32,7 @@ public class BicicletaTest {
 	@Test
 	public void probarQueLaBicicletaSoloMueveEnUnaCiudad() {
 		Integer valorEsperado = 1;
-		Bicicleta bicicleta = new Bicicleta();
+		Transporte bicicleta = new Bicicleta();
 		Paquete paquete1 = new Paquete(0.1, 0.1, 0.1, 1.0);
 		bicicleta.enviar(paquete1, "San Justo");
 		
@@ -49,7 +49,7 @@ public class BicicletaTest {
 	@Test
 	public void probarQueNoSePuedaEnviarUnPaqueteQueSuperaElPesoMaximo() {
 		Integer valorEsperado = 0;
-		Bicicleta bicicleta = new Bicicleta();
+		Transporte bicicleta = new Bicicleta();
 		Paquete paquete = new Paquete(0.5, 0.5, 0.51, 1.0);
 		bicicleta.enviar(paquete, "San Justo");
 			
@@ -60,7 +60,7 @@ public class BicicletaTest {
 	@Test
 	public void probarQueNoSePuedaEnviarUnPaqueteQueSuperaElVolumenMaximo() {
 		Integer valorEsperado = 0;
-		Bicicleta bicicleta = new Bicicleta();
+		Transporte bicicleta = new Bicicleta();
 		Paquete paquete = new Paquete(0.5, 0.5, 0.5, 15.1);
 		bicicleta.enviar(paquete, "San Justo");
 			

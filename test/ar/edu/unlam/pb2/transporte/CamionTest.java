@@ -14,7 +14,7 @@ public class CamionTest {
 	@Test
 	public void probarQueNoPuedeEnviarPaqueteQueSupereElMaximoPeso() {
 		Integer valorEsperado = 2;
-		Camion camion = new Camion();
+		Transporte camion = new Camion();
 		Paquete paquete1 = new Paquete(0.5, 0.5, 0.51, 10000.0);
 		camion.enviar(paquete1, "San Justo");
 
@@ -31,7 +31,7 @@ public class CamionTest {
 	@Test
 	public void probarQueNoSePuedeLlevarMasDe20M3DeCarga() {
 		Integer valorEsperado = 4;
-		Camion camion = new Camion();
+		Transporte camion = new Camion();
 		Paquete paquete1 = new Paquete(0.5, 0.5, 0.51, 1000.0);
 		camion.enviar(paquete1, "San Justo");
 
